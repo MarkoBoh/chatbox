@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/070428bd88.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Chatbot</title>
+    <style>
+        body {
+            display: flex;
+             justify-content: center; 
+            align-items: center;
+            height: 80vh;
+            background-color: #f7f7f7;
+        }
+        .welcome-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .chatbot-icon {
+            width: 50px;
+            height: 50px;
+            background-image: url('bot.png');
+            background-size: cover;
+            cursor: pointer;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-text">Dajmo se pogovarjat!</div>
+
+    <section class="msger">
+        <header class="msger-header">
+           
+            <div class="msger-header-title">
+            <img src="robot.png" alt="" srcset="">
+            <p>ChatBot</p>
+            <button class="reset-btn">Reset</button>
+          </div>
+     
+        </header>
+        <main class="msger-chat">
+          <div class="msg left-msg">
+            <div
+             class="msg-img"
+             style="background-image: url(bot.png)"
+            ></div>
+            <div class="msg-bubble">
+              <div class="msg-info">
+                <div class="msg-info-name">BOT</div>
+                <div class="msg-info-time">12:45</div>
+              </div>
+              <div class="msg-text">
+               Daj me kaj vprašaj.              </div>
+            </div>
+          </div>
+          
+        </main>
+        <form class="msger-inputarea">
+          <input type="text" class="msger-input" placeholder="Enter your message...">
+          <button type="submit" class="msger-send-btn"><i class="fa fa-paper-plane"></i></button>
+        </form>
+        <div class="resize-handle"></div> <!-- Resizing handle -->
+      </section>
+
+
+
+
+
+
+    <div class="chatbot-icon" onclick="showChatbot()"></div>
+
+    <!-- Chatbot code from index.html can be added here and shown/hidden using the showChatbot function -->
+
+    <script>
+        const chatbot = document.querySelector('.msger');
+        chatbot.style.display = "none";
+
+        function showChatbot() {
+            const chatbot = document.querySelector('.msger');
+            if (chatbot.style.display === "none" || !chatbot.style.display) {
+                chatbot.style.display = "block";
+            } else {
+                chatbot.style.display = "none";
+            }
+        }
+
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
